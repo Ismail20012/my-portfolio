@@ -9,11 +9,11 @@ export default function ProjectsPage() {
       id: 1,
       title: "Knowledge graphs in Actuarial science",
       description:
-        "Research project exploring the application of knowledge graphs in actuarial provisioning. Developed models to improve accuracy of reserve calculations using graph-based approaches.",
-      tools: ["Python", "GLM", "R", "Statistical Analysis"],
+        "Création d’un graphe de connaissances causal, extrait automatiquement de rapports d’accidents NTSB via LLM et analysé par GNN, pour tester l’estimation de provisions et la prédiction de recommandations de sécurité en assurance."
+      tools: ["Python", "GNN", "LLM", "Statistical Analysis","Predictive Modelling],
       icon: <Database className="h-8 w-8 text-blue-600" />,
-      status: "In Progress",
-      pdfUrl: null,
+      status: "Completed",
+      pdfUrl: "/documents/TER_KGs.pdf",
     },
     {
       id: 2,
