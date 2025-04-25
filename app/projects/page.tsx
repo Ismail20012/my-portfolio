@@ -9,8 +9,8 @@ export default function ProjectsPage() {
       id: 1,
       title: "Knowledge graphs in Actuarial science",
       description:
-        "Création d’un graphe de connaissances causal, extrait automatiquement de rapports d’accidents NTSB via LLM et analysé par GNN, pour tester l’estimation de provisions et la prédiction de recommandations de sécurité en assurance."
-      tools: ["Python", "GNN", "LLM", "Statistical Analysis","Predictive Modelling],
+        "Création d’un graphe de connaissances causal, extrait automatiquement de rapports d’accidents NTSB via LLM et analysé par GNN, pour tester l’estimation de provisions et la prédiction de recommandations de sécurité en assurance.",
+      tools: ["Python", "GNN", "LLM", "Statistical Analysis","Predictive Modelling"],
       icon: <Database className="h-8 w-8 text-blue-600" />,
       status: "Completed",
       pdfUrl: "/documents/TER_KGs.pdf",
