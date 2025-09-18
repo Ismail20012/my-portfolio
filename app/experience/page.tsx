@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Briefcase, Calendar, MapPin, CheckCircle } from "lucide-react"
+import { Briefcase, Calendar, MapPin, CheckCircle, FileText } from "lucide-react"
 
 export default function ExperiencePage() {
   return (
@@ -12,86 +12,17 @@ export default function ExperiencePage() {
         <div className="abstract-shape abstract-shape-2"></div>
 
         <div className="space-y-12">
-          {/* Internship */}
-          <Card className="border-l-4 border-l-blue-600 custom-card animate-slide-in-left">
+          {/* Alternance CNP Prévoyance */}
+          <Card className="border-l-4 border-l-green-600 custom-card animate-slide-in-left">
             <CardHeader>
-              <CardTitle className="text-2xl flex items-center text-blue-700">
-                <Briefcase className="h-6 w-6 mr-3 text-blue-600" />
-                Web Development Internship at LHconsult
+              <CardTitle className="text-2xl flex items-center text-green-700">
+                <Briefcase className="h-6 w-6 mr-3 text-green-600" />
+                Actuarial Apprentice – Pilotage Financier at CNP Prévoyance
               </CardTitle>
               <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mt-2 gap-y-1 sm:gap-x-6">
                 <div className="flex items-center">
                   <Calendar className="h-4 w-4 mr-2" />
-                  <span>July – August 2024</span>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  <span>Paris, France</span>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-medium mb-2 text-blue-700">Responsibilities</h3>
-                  <ul className="space-y-2">
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>
-                        Web development for the company, creating and maintaining client-facing website of the company
-                      </span>
-                    </li>
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>Database management using Excel, Access, and SQL for data organization and retrieval</span>
-                    </li>
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>Project coordination with cross-functional teams to ensure timely delivery</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-medium mb-2 text-blue-700">Skills Used</h3>
-                  <ul className="space-y-2">
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>Python programming for automation and data processing tasks</span>
-                    </li>
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>Advanced data handling techniques for large datasets</span>
-                    </li>
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>Web development using modern frameworks and technologies</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-medium mb-2 text-blue-700">Key Achievements</h3>
-                  <p className="text-gray-700">
-                    Successfully implemented database optimization that improved query performance by 30%. Developed an
-                    automated reporting system that reduced manual work by several hours per week.
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Student Job */}
-          <Card className="border-l-4 border-l-orange-500 custom-card animate-slide-in-right">
-            <CardHeader>
-              <CardTitle className="text-2xl flex items-center text-blue-700">
-                <Briefcase className="h-6 w-6 mr-3 text-orange-500" />
-                Student Job at Food Society/SMPR
-              </CardTitle>
-              <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mt-2 gap-y-1 sm:gap-x-6">
-                <div className="flex items-center">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  <span>September 2023 – July 2024</span>
+                  <span>Sept 2025 – Aug 2027</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-4 w-4 mr-2" />
@@ -100,53 +31,62 @@ export default function ExperiencePage() {
               </div>
             </CardHeader>
             <CardContent>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-medium mb-2 text-blue-700">Responsibilities</h3>
-                  <ul className="space-y-2">
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-orange-500 flex-shrink-0 mt-0.5" />
-                      <span>
-                        Cross-functional collaboration with various departments to support business operations
-                      </span>
-                    </li>
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-orange-500 flex-shrink-0 mt-0.5" />
-                      <span>Autonomous execution of assigned missions and projects</span>
-                    </li>
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-orange-500 flex-shrink-0 mt-0.5" />
-                      <span>Communication with team members and stakeholders to ensure smooth operations</span>
-                    </li>
-                  </ul>
-                </div>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex">
+                  <CheckCircle className="h-5 w-5 mr-2 text-green-600 flex-shrink-0 mt-0.5" />
+                  Contribution au provisionnement et à la projection du compte de résultat Prévoyance (risques décès, obsèques, dépendance, GAV, emprunteur…).
+                </li>
+                <li className="flex">
+                  <CheckCircle className="h-5 w-5 mr-2 text-green-600 flex-shrink-0 mt-0.5" />
+                  Analyse financière et production de reporting (ORSA, marges PB, ratios financiers) sur plusieurs horizons (1 an, 5 ans, 10 ans).
+                </li>
+                <li className="flex">
+                  <CheckCircle className="h-5 w-5 mr-2 text-green-600 flex-shrink-0 mt-0.5" />
+                  Automatisation et simplification de modèles de projection sous FGAAP à l’aide d’outils de Business Intelligence (Excel VBA, Python, BI tools).
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
 
-                <div>
-                  <h3 className="text-lg font-medium mb-2 text-blue-700">Skills Developed</h3>
-                  <ul className="space-y-2">
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-orange-500 flex-shrink-0 mt-0.5" />
-                      <span>Time management and prioritization in a fast-paced environment</span>
-                    </li>
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-orange-500 flex-shrink-0 mt-0.5" />
-                      <span>Customer service and interpersonal communication</span>
-                    </li>
-                    <li className="flex">
-                      <CheckCircle className="h-5 w-5 mr-2 text-orange-500 flex-shrink-0 mt-0.5" />
-                      <span>Problem-solving in real-time situations</span>
-                    </li>
-                  </ul>
+          {/* Internship Nextuarial */}
+          <Card className="border-l-4 border-l-blue-600 custom-card animate-slide-in-right">
+            <CardHeader>
+              <CardTitle className="text-2xl flex items-center text-blue-700">
+                <Briefcase className="h-6 w-6 mr-3 text-blue-600" />
+                Actuarial Data Science Intern at Nextuarial
+              </CardTitle>
+              <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mt-2 gap-y-1 sm:gap-x-6">
+                <div className="flex items-center">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  <span>June – July 2025</span>
                 </div>
-
-                <div>
-                  <h3 className="text-lg font-medium mb-2 text-blue-700">Key Achievements</h3>
-                  <p className="text-gray-700">
-                    Balanced academic studies with professional responsibilities, demonstrating strong time management
-                    skills. Received positive feedback from management for reliability and initiative.
-                  </p>
+                <div className="flex items-center">
+                  <MapPin className="h-4 w-4 mr-2" />
+                  <span>Paris, France</span>
+                </div>
+                <div className="flex items-center">
+                  <FileText className="h-4 w-4 mr-2 text-blue-600" />
+                  <a href="/documents/MOHAMED-EL-HAFED_Ismail_RapportStage.pdf" className="text-blue-600 underline">
+                    Rapport de stage (PDF)
+                  </a>
                 </div>
               </div>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3 text-gray-700">
+                <li className="flex">
+                  <CheckCircle className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
+                  Développement d’un chatbot actuariel (GPT-4, Streamlit, Python) permettant d’interroger des données de provisionnement en langage naturel.
+                </li>
+                <li className="flex">
+                  <CheckCircle className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
+                  Segmentation de portefeuilles via Machine Learning (clustering, k-means, validation statistique et métier).
+                </li>
+                <li className="flex">
+                  <CheckCircle className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
+                  Mise en œuvre de méthodologies Chain Ladder, Mack, et Bornhueter-Ferguson dans un contexte industriel.
+                </li>
+              </ul>
             </CardContent>
           </Card>
         </div>
