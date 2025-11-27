@@ -29,7 +29,7 @@ export default function Home() {
                 Ismail Mohamed El Hafed
               </h1>
               <h2 className="text-2xl font-bold text-blue-700 mb-4">
-                Actuarial Science Student &amp; Junior Actuary
+                Actuarial Science Student 
               </h2>
               <p className="text-lg text-gray-800 mb-6">
                 Hello, I&apos;m Ismail Mohamed El Hafed, a Master&apos;s student in Actuarial Science at ISFA (Lyon).
