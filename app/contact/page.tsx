@@ -53,7 +53,7 @@ export default function ContactPage() {
       <div className="max-w-5xl mx-auto bg-white/90 backdrop-blur-md rounded-xl p-8 shadow-lg">
         <h1 className="text-4xl font-bold mb-8 text-center text-blue-800">Contact Me</h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-12">
-          I'm currently seeking internship and apprenticeship opportunities. Feel free to reach out if you'd like to
+          I'm currently seeking future job opportunities. Feel free to reach out if you'd like to
           connect!
         </p>
 
