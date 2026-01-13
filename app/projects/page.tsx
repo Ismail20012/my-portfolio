@@ -7,16 +7,47 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
+      title: "Machine Learning for Insurance Pricing (CatBoost vs XGBoost)",
+      description:
+        "Comprehensive benchmark comparing CatBoost and XGBoost for auto insurance frequency modeling. Implemented Bayesian hyperparameter optimization (Hyperopt/TPE), 5-fold cross-validation, Partial Dependence Plots, SHAP interpretability, and Gini coefficient analysis on 500k+ records.",
+      tools: ["Python", "CatBoost", "XGBoost", "Hyperopt", "SHAP", "Scikit-learn"],
+      icon: <BarChart className="h-8 w-8 text-indigo-600" />,
+      status: "Completed",
+      pdfUrl: "/documents/Data_science_project.pdf",
+    },
+    {
+      id: 2,
+      title: "Copula Modeling for Climate Risk Dependencies",
+      description:
+        "Statistical analysis of humidity-temperature dependencies in England using copula theory. Transformed data to pseudo-observations (Sklar's theorem), tested rotated Clayton/Gumbel/Frank copulas for negative dependence, analyzed tail dependencies (λ_UL, λ_LR), and validated fit using AIC/BIC and graphical methods.",
+      tools: ["R", "Copula Theory", "Maximum Likelihood", "Statistical Modeling"],
+      icon: <LineChart className="h-8 w-8 text-cyan-600" />,
+      status: "Completed",
+      pdfUrl: "/documents/Projet_qrm.pdf",
+      slidesUrl: "/documents/Projet_qrm_slides.pdf",
+    },
+    {
+      id: 3,
+      title: "Monte Carlo Methods for Option Pricing & Jump-Diffusion",
+      description:
+        "Implementation of a complete financial modeling pipeline: Black-Scholes put pricing, volatility calibration from market options, drift estimation from historical data, and Monte Carlo simulations using Euler discretization for Geometric Brownian Motion and Merton jump-diffusion model.",
+      tools: ["Python", "Black-Scholes", "Monte Carlo", "Merton Model", "SciPy"],
+      icon: <Code className="h-8 w-8 text-violet-600" />,
+      status: "Completed",
+      pdfUrl: "/documents/projet_intermediaire_techniques_numériques.pdf",
+    },
+    {
+      id: 4,
       title: "Knowledge graphs in Actuarial science",
       description:
         "Development of a causal knowledge graph, automatically extracted from NTSB accident reports using an LLM and analyzed with a GNN, to test claims reserve estimation and the prediction of safety recommendations in insurance.",
-      tools: ["Python", "GNN", "LLM", "Statistical Analysis","Predictive Modelling"],
+      tools: ["Python", "GNN", "LLM", "Statistical Analysis", "Predictive Modelling"],
       icon: <Database className="h-8 w-8 text-blue-600" />,
       status: "Completed",
       pdfUrl: "/documents/TER_KGs.pdf",
     },
     {
-      id: 2,
+      id: 5,
       title: "Impact of Unemployment Rates on Inflation",
       description:
         "Analyzed the relationship between unemployment rates and inflation using econometric models. Conducted time series analysis to identify patterns and correlations between these economic indicators.",
@@ -26,7 +57,7 @@ export default function ProjectsPage() {
       pdfUrl: "/documents/project2.pdf",
     },
     {
-      id: 3,
+      id: 6,
       title: "Excel Data Quality Verification",
       description:
         "Developed a comprehensive data quality verification framework for insurance datasets. Implemented automated checks and validation procedures to ensure data integrity for actuarial analysis.",
@@ -36,7 +67,7 @@ export default function ProjectsPage() {
       pdfUrl: "/documents/project3.pdf",
     },
     {
-      id: 4,
+      id: 7,
       title: "New Actuarial Methods and Machine Learning",
       description:
         "Explored innovative actuarial methods and machine learning applications in insurance. Compared traditional actuarial approaches with modern machine learning techniques for pricing and risk assessment.",
@@ -46,7 +77,7 @@ export default function ProjectsPage() {
       pdfUrl: "/documents/project4.pdf",
     },
     {
-      id: 5,
+      id: 8,
       title: "Data Analysis and Clustering on Automotive Datasets",
       description:
         "Performed comprehensive data analysis using real-world automotive and customer datasets. Applied various supervised and unsupervised learning methods including ANOVA, PCA, LDA, and Hierarchical Clustering.",
@@ -56,7 +87,7 @@ export default function ProjectsPage() {
       pdfUrl: "/documents/project5.pdf",
     },
     {
-      id: 6,
+      id: 9,
       title: "SAS Data Processing for Insurance",
       description:
         "Developed SAS scripts for processing and analyzing insurance data. Created efficient data pipelines for actuarial modeling and reporting.",
@@ -108,15 +139,28 @@ export default function ProjectsPage() {
                     Report In Progress
                   </div>
                 ) : (
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="border-blue-600 text-blue-600 hover:bg-blue-50 custom-button"
-                  >
-                    <a href={project.pdfUrl} target="_blank" rel="noopener noreferrer" download>
-                      <Download className="mr-2 h-4 w-4" /> Download Report
-                    </a>
-                  </Button>
+                  <div className="flex flex-col gap-2 w-full">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="border-blue-600 text-blue-600 hover:bg-blue-50 custom-button"
+                    >
+                      <a href={project.pdfUrl} target="_blank" rel="noopener noreferrer" download>
+                        <Download className="mr-2 h-4 w-4" /> Download Report
+                      </a>
+                    </Button>
+                    {(project as any).slidesUrl && (
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 custom-button"
+                      >
+                        <a href={(project as any).slidesUrl} target="_blank" rel="noopener noreferrer" download>
+                          <Download className="mr-2 h-4 w-4" /> Download Slides
+                        </a>
+                      </Button>
+                    )}
+                  </div>
                 )}
               </CardFooter>
             </Card>
