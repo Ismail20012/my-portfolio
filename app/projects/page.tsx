@@ -1,15 +1,19 @@
+"use client"
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Database, BarChart, Code, LineChart, CheckSquare, Download } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/LanguageContext"
 
 export default function ProjectsPage() {
+  const { t } = useLanguage()
+
   const projects = [
     {
       id: 1,
-      title: "Machine Learning for Insurance Pricing (CatBoost vs XGBoost)",
-      description:
-        "Comprehensive benchmark comparing CatBoost and XGBoost for auto insurance frequency modeling. Implemented Bayesian hyperparameter optimization (Hyperopt/TPE), 5-fold cross-validation, Partial Dependence Plots, SHAP interpretability, and Gini coefficient analysis on 500k+ records.",
+      titleKey: "project.ml.title",
+      descKey: "project.ml.desc",
       tools: ["Python", "CatBoost", "XGBoost", "Hyperopt", "SHAP", "Scikit-learn"],
       icon: <BarChart className="h-8 w-8 text-indigo-600" />,
       status: "Completed",
@@ -17,9 +21,8 @@ export default function ProjectsPage() {
     },
     {
       id: 2,
-      title: "Copula Modeling for Climate Risk Dependencies",
-      description:
-        "Statistical analysis of humidity-temperature dependencies in England using copula theory. Transformed data to pseudo-observations (Sklar's theorem), tested rotated Clayton/Gumbel/Frank copulas for negative dependence, analyzed tail dependencies (λ_UL, λ_LR), and validated fit using AIC/BIC and graphical methods.",
+      titleKey: "project.copula.title",
+      descKey: "project.copula.desc",
       tools: ["R", "Copula Theory", "Maximum Likelihood", "Statistical Modeling"],
       icon: <LineChart className="h-8 w-8 text-cyan-600" />,
       status: "Completed",
@@ -28,9 +31,8 @@ export default function ProjectsPage() {
     },
     {
       id: 3,
-      title: "Monte Carlo Methods for Option Pricing & Jump-Diffusion",
-      description:
-        "Implementation of a complete financial modeling pipeline: Black-Scholes put pricing, volatility calibration from market options, drift estimation from historical data, and Monte Carlo simulations using Euler discretization for Geometric Brownian Motion and Merton jump-diffusion model.",
+      titleKey: "project.montecarlo.title",
+      descKey: "project.montecarlo.desc",
       tools: ["Python", "Black-Scholes", "Monte Carlo", "Merton Model", "SciPy"],
       icon: <Code className="h-8 w-8 text-violet-600" />,
       status: "Completed",
@@ -38,9 +40,8 @@ export default function ProjectsPage() {
     },
     {
       id: 4,
-      title: "Knowledge graphs in Actuarial science",
-      description:
-        "Development of a causal knowledge graph, automatically extracted from NTSB accident reports using an LLM and analyzed with a GNN, to test claims reserve estimation and the prediction of safety recommendations in insurance.",
+      titleKey: "project.kg.title",
+      descKey: "project.kg.desc",
       tools: ["Python", "GNN", "LLM", "Statistical Analysis", "Predictive Modelling"],
       icon: <Database className="h-8 w-8 text-blue-600" />,
       status: "Completed",
@@ -48,9 +49,8 @@ export default function ProjectsPage() {
     },
     {
       id: 5,
-      title: "Impact of Unemployment Rates on Inflation",
-      description:
-        "Analyzed the relationship between unemployment rates and inflation using econometric models. Conducted time series analysis to identify patterns and correlations between these economic indicators.",
+      titleKey: "project.unemployment.title",
+      descKey: "project.unemployment.desc",
       tools: ["R", "Econometrics", "Linear model", "Data Visualization"],
       icon: <LineChart className="h-8 w-8 text-green-600" />,
       status: "Completed",
@@ -58,9 +58,8 @@ export default function ProjectsPage() {
     },
     {
       id: 6,
-      title: "Excel Data Quality Verification",
-      description:
-        "Developed a comprehensive data quality verification framework for insurance datasets. Implemented automated checks and validation procedures to ensure data integrity for actuarial analysis.",
+      titleKey: "project.excel.title",
+      descKey: "project.excel.desc",
       tools: ["Excel", "VBA", "Data Analysis", "Statistics"],
       icon: <CheckSquare className="h-8 w-8 text-purple-600" />,
       status: "Completed",
@@ -68,9 +67,8 @@ export default function ProjectsPage() {
     },
     {
       id: 7,
-      title: "New Actuarial Methods and Machine Learning",
-      description:
-        "Explored innovative actuarial methods and machine learning applications in insurance. Compared traditional actuarial approaches with modern machine learning techniques for pricing and risk assessment.",
+      titleKey: "project.newmethods.title",
+      descKey: "project.newmethods.desc",
       tools: ["XGBoost", "Random Forest", "GLM", "Data Visualization"],
       icon: <Code className="h-8 w-8 text-teal-600" />,
       status: "Completed",
@@ -78,9 +76,8 @@ export default function ProjectsPage() {
     },
     {
       id: 8,
-      title: "Data Analysis and Clustering on Automotive Datasets",
-      description:
-        "Performed comprehensive data analysis using real-world automotive and customer datasets. Applied various supervised and unsupervised learning methods including ANOVA, PCA, LDA, and Hierarchical Clustering.",
+      titleKey: "project.clustering.title",
+      descKey: "project.clustering.desc",
       tools: ["Python", "R", "ANOVA", "PCA/LDA", "Clustering"],
       icon: <BarChart className="h-8 w-8 text-orange-600" />,
       status: "Completed",
@@ -88,9 +85,8 @@ export default function ProjectsPage() {
     },
     {
       id: 9,
-      title: "SAS Data Processing for Insurance",
-      description:
-        "Developed SAS scripts for processing and analyzing insurance data. Created efficient data pipelines for actuarial modeling and reporting.",
+      titleKey: "project.sas.title",
+      descKey: "project.sas.desc",
       tools: ["SAS", "Data Processing", "Statistical Analysis"],
       icon: <Database className="h-8 w-8 text-blue-800" />,
       status: "Completed",
@@ -101,10 +97,9 @@ export default function ProjectsPage() {
   return (
     <main className="container mx-auto px-4 py-12 animate-fade-in">
       <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-xl p-8 shadow-lg">
-        <h1 className="text-4xl font-bold mb-8 text-center text-blue-800">Projects</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-blue-800">{t("projects.title")}</h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-12">
-          Here are some of my academic and professional projects that showcase my skills in actuarial science, data
-          analysis, and programming.
+          {t("projects.intro")}
         </p>
 
         {/* Abstract decorative elements */}
@@ -120,15 +115,15 @@ export default function ProjectsPage() {
             >
               <CardHeader>
                 <div className="mb-4">{project.icon}</div>
-                <CardTitle className="text-xl text-blue-700">{project.title}</CardTitle>
+                <CardTitle className="text-xl text-blue-700">{t(project.titleKey)}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
-                <CardDescription className="text-gray-700 text-base">{project.description}</CardDescription>
+                <CardDescription className="text-gray-700 text-base">{t(project.descKey)}</CardDescription>
               </CardContent>
               <CardFooter className="flex flex-col items-start gap-4">
                 <div className="flex flex-wrap gap-2">
                   {project.tools.map((tool, toolIndex) => (
-                    <Badge key={toolIndex} variant="secondary" className="bg-blue-100 text-blue-800">
+                    <Badge key={toolIndex} variant="secondary" className="bg-blue-100 text-blue-800 badge-bounce-in" style={{ animationDelay: `${toolIndex * 0.05}s` }}>
                       {tool}
                     </Badge>
                   ))}
@@ -136,7 +131,7 @@ export default function ProjectsPage() {
                 {project.status === "In Progress" ? (
                   <div className="text-orange-600 font-medium flex items-center">
                     <span className="inline-block w-2 h-2 rounded-full bg-orange-600 mr-2"></span>
-                    Report In Progress
+                    {t("projects.reportInProgress")}
                   </div>
                 ) : (
                   <div className="flex flex-col gap-2 w-full">
@@ -146,7 +141,7 @@ export default function ProjectsPage() {
                       className="border-blue-600 text-blue-600 hover:bg-blue-50 custom-button"
                     >
                       <a href={project.pdfUrl} target="_blank" rel="noopener noreferrer" download>
-                        <Download className="mr-2 h-4 w-4" /> Download Report
+                        <Download className="mr-2 h-4 w-4" /> {t("projects.downloadReport")}
                       </a>
                     </Button>
                     {(project as any).slidesUrl && (
@@ -156,7 +151,7 @@ export default function ProjectsPage() {
                         className="border-cyan-600 text-cyan-600 hover:bg-cyan-50 custom-button"
                       >
                         <a href={(project as any).slidesUrl} target="_blank" rel="noopener noreferrer" download>
-                          <Download className="mr-2 h-4 w-4" /> Download Slides
+                          <Download className="mr-2 h-4 w-4" /> {t("projects.downloadSlides")}
                         </a>
                       </Button>
                     )}
@@ -169,40 +164,38 @@ export default function ProjectsPage() {
 
         <div className="section-divider"></div>
 
-        <h2 className="text-3xl font-bold mb-8 text-center text-blue-800">Personal Project</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-blue-800">{t("projects.personalProject")}</h2>
         <div className="max-w-3xl mx-auto">
           <Card className="custom-card animate-slide-up">
             <CardHeader>
               <div className="flex items-center justify-center mb-4">
                 <Code className="h-10 w-10 text-blue-600" />
               </div>
-              <CardTitle className="text-2xl text-center text-blue-700">Innovative Actuarial Modeling</CardTitle>
+              <CardTitle className="text-2xl text-center text-blue-700">{t("projects.personalProjectTitle")}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 mb-6">
-                This project demonstrates my commitment to innovative actuarial modeling and creative problem-solving in
-                data science. It reflects my passion for leveraging analytical insights to address real-world challenges
-                in the actuarial domain.
+                {t("projects.personalProjectDesc")}
               </p>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-lg font-medium mb-2 text-blue-700">Key Features</h3>
+                  <h3 className="text-lg font-medium mb-2 text-blue-700">{t("projects.keyFeatures")}</h3>
                   <ul className="space-y-2">
                     <li className="flex">
                       <CheckSquare className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>Advanced statistical modeling techniques for risk assessment</span>
+                      <span>{t("projects.feature1")}</span>
                     </li>
                     <li className="flex">
                       <CheckSquare className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>Integration of machine learning with traditional actuarial methods</span>
+                      <span>{t("projects.feature2")}</span>
                     </li>
                     <li className="flex">
                       <CheckSquare className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>Practical applications in insurance pricing and risk management</span>
+                      <span>{t("projects.feature3")}</span>
                     </li>
                     <li className="flex">
                       <CheckSquare className="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span>Comprehensive documentation and reproducible research</span>
+                      <span>{t("projects.feature4")}</span>
                     </li>
                   </ul>
                 </div>
@@ -215,7 +208,7 @@ export default function ProjectsPage() {
                 className="border-blue-600 text-blue-600 hover:bg-blue-50 custom-button w-full"
               >
                 <a href="/documents/project6.pdf" target="_blank" rel="noopener noreferrer" download>
-                  <Download className="mr-2 h-4 w-4" /> Download Report
+                  <Download className="mr-2 h-4 w-4" /> {t("projects.downloadReport")}
                 </a>
               </Button>
             </CardFooter>

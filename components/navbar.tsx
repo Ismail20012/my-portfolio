@@ -6,20 +6,23 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/LanguageContext"
+import { LanguageToggle } from "@/components/language-toggle"
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Experience", href: "/experience" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
-  { name: "Resume", href: "/resume" },
+  { key: "nav.home", href: "/" },
+  { key: "nav.about", href: "/about" },
+  { key: "nav.experience", href: "/experience" },
+  { key: "nav.projects", href: "/projects" },
+  { key: "nav.contact", href: "/contact" },
+  { key: "nav.resume", href: "/resume" },
 ]
 
 export default function Navbar() {
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +58,7 @@ export default function Navbar() {
                 pathname === item.href ? "text-blue-700 font-semibold" : "text-gray-700",
               )}
             >
-              {item.name}
+              {t(item.key)}
               <span
                 className={cn(
                   "absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full",
@@ -64,13 +67,17 @@ export default function Navbar() {
               ></span>
             </Link>
           ))}
+          <LanguageToggle />
         </nav>
 
-        {/* Mobile menu button */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-          {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          <span className="sr-only">Toggle menu</span>
-        </Button>
+        {/* Mobile: Language toggle + menu button */}
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageToggle />
+          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <span className="sr-only">Toggle menu</span>
+          </Button>
+        </div>
       </div>
 
       {/* Mobile navigation */}
@@ -87,7 +94,7 @@ export default function Navbar() {
                 )}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item.name}
+                {t(item.key)}
               </Link>
             ))}
           </div>

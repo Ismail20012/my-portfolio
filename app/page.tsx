@@ -1,9 +1,14 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Mail, Phone, Linkedin } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -26,24 +31,18 @@ export default function Home() {
             {/* Text Block */}
             <div className="w-full md:w-3/5 lg:w-1/2 bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl animate-slide-up order-2 md:order-1">
               <h1 className="text-4xl font-bold tracking-tight text-blue-800 sm:text-5xl mb-4">
-                Ismail Mohamed El Hafed
+                {t("home.title")}
               </h1>
               <h2 className="text-2xl font-bold text-blue-700 mb-4">
-                Actuarial Science Student 
+                {t("home.subtitle")}
               </h2>
               <p className="text-lg text-gray-800 mb-6">
-                Hello, I&apos;m Ismail Mohamed El Hafed, a Master&apos;s student in Actuarial Science at ISFA (Lyon).
-                I&apos;m currently working on my actuarial thesis in Prévoyance and I&apos;ve gained experience in
-                actuarial modeling, reserving, and data science through internships at CNP Assurances, Nextuarial, and LHconsult.
-                I&apos;m open to professional opportunities where I can combine{" "}
-                <span className="font-semibold">technical actuarial work</span> (P&amp;L, projection, risk modeling)
-                with <span className="font-semibold">coding and data</span> (Python, VBA, SQL, web tools).
-                On this site, you&apos;ll find my background, experience, and projects.
+                {t("home.intro")}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild className="bg-blue-600 hover:bg-blue-700 custom-button">
                   <Link href="/about">
-                    Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    {t("home.learnMore")} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button
@@ -52,7 +51,7 @@ export default function Home() {
                   className="border-blue-600 text-blue-600 hover:bg-blue-50 custom-button"
                 >
                   <Link href="/resume">
-                    View Resume <Download className="ml-2 h-4 w-4" />
+                    {t("home.viewResume")} <Download className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </div>
@@ -61,12 +60,12 @@ export default function Home() {
 
             {/* Image Block */}
             <div className="w-full md:w-2/5 lg:w-1/3 order-1 md:order-2 animate-slide-up">
-              <div className="relative w-full max-w-xs mx-auto md:max-w-sm aspect-square overflow-hidden rounded-lg shadow-xl">
+              <div className="relative w-full max-w-xs mx-auto md:max-w-sm aspect-square overflow-hidden rounded-lg shadow-xl image-hover-zoom">
                 <Image
                   src="/images/LCP_2588.jpg"
                   alt="Ismail Mohamed El Hafed"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-center transition-transform duration-500"
                 />
               </div>
             </div>
@@ -80,7 +79,7 @@ export default function Home() {
       <section className="py-16 bg-white/80 backdrop-blur-md">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-10 text-center text-blue-800 animate-fade-in">
-            My Focus Areas
+            {t("home.focusAreas")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Education Card */}
@@ -88,17 +87,15 @@ export default function Home() {
               className="custom-card p-6 animate-slide-in-left rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300"
               style={{ animationDelay: "0.1s" }}
             >
-              <h3 className="text-xl font-semibold mb-3 text-blue-700">Education</h3>
+              <h3 className="text-xl font-semibold mb-3 text-blue-700">{t("home.education")}</h3>
               <p className="text-gray-700">
-                Master&apos;s in Actuarial Science at ISFA (Université Lyon 1),
-                with a strong mathematical background (Prépa MPSI/MP)
-                and international experience through an academic exchange semester in Vietnam.
+                {t("home.educationDesc")}
               </p>
               <Link
                 href="/about"
-                className="text-blue-600 hover:text-blue-800 mt-4 inline-block font-medium"
+                className="text-blue-600 hover:text-blue-800 mt-4 inline-block font-medium link-underline-gradient"
               >
-                Learn more →
+                {t("home.learnMoreLink")}
               </Link>
             </div>
 
@@ -107,18 +104,15 @@ export default function Home() {
               className="custom-card p-6 animate-slide-in-left rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300"
               style={{ animationDelay: "0.3s" }}
             >
-              <h3 className="text-xl font-semibold mb-3 text-blue-700">Experience</h3>
+              <h3 className="text-xl font-semibold mb-3 text-blue-700">{t("home.experience")}</h3>
               <p className="text-gray-700">
-                Actuarial and data-focused experiences including:
-                P&amp;L projection and Prévoyance modeling at CNP Assurances,
-                actuarial reserving &amp; data science at Nextuarial,
-                and web development &amp; SQL database management at LHconsult.
+                {t("home.experienceDesc")}
               </p>
               <Link
                 href="/experience"
-                className="text-blue-600 hover:text-blue-800 mt-4 inline-block font-medium"
+                className="text-blue-600 hover:text-blue-800 mt-4 inline-block font-medium link-underline-gradient"
               >
-                View experience →
+                {t("home.viewExperience")}
               </Link>
             </div>
 
@@ -127,16 +121,15 @@ export default function Home() {
               className="custom-card p-6 animate-slide-in-left rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300"
               style={{ animationDelay: "0.5s" }}
             >
-              <h3 className="text-xl font-semibold mb-3 text-blue-700">Projects</h3>
+              <h3 className="text-xl font-semibold mb-3 text-blue-700">{t("home.projects")}</h3>
               <p className="text-gray-700">
-                Academic and personal projects in actuarial modeling, Monte Carlo simulation,
-                data science, and innovative tools for risk analysis and financial decision-making.
+                {t("home.projectsDesc")}
               </p>
               <Link
                 href="/projects"
-                className="text-blue-600 hover:text-blue-800 mt-4 inline-block font-medium"
+                className="text-blue-600 hover:text-blue-800 mt-4 inline-block font-medium link-underline-gradient"
               >
-                Explore projects →
+                {t("home.exploreProjects")}
               </Link>
             </div>
           </div>
@@ -147,7 +140,7 @@ export default function Home() {
       {/* Contact Preview */}
       <section className="py-16 bg-white/70 backdrop-blur-md">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-8 text-blue-800">Get In Touch</h2>
+          <h2 className="text-3xl font-bold mb-8 text-blue-800">{t("home.getInTouch")}</h2>
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center hover-scale">
               <Mail className="h-5 w-5 mr-2 text-blue-600" />
@@ -180,7 +173,7 @@ export default function Home() {
             </div>
           </div>
           <Button asChild className="bg-blue-600 hover:bg-blue-700 custom-button animate-pulse-slow">
-            <Link href="/contact">Contact Me</Link>
+            <Link href="/contact">{t("home.contactMe")}</Link>
           </Button>
         </div>
       </section>

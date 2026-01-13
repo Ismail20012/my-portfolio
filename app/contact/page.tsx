@@ -9,8 +9,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Mail, Phone, Linkedin, Send, CheckCircle } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/LanguageContext"
 
 export default function ContactPage() {
+  const { t } = useLanguage()
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -51,10 +53,9 @@ export default function ContactPage() {
   return (
     <main className="container mx-auto px-4 py-12 animate-fade-in">
       <div className="max-w-5xl mx-auto bg-white/90 backdrop-blur-md rounded-xl p-8 shadow-lg">
-        <h1 className="text-4xl font-bold mb-8 text-center text-blue-800">Contact Me</h1>
+        <h1 className="text-4xl font-bold mb-8 text-center text-blue-800">{t("contact.title")}</h1>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center mb-12">
-          I'm currently seeking future job opportunities. Feel free to reach out if you'd like to
-          connect!
+          {t("contact.intro")}
         </p>
 
         {/* Abstract decorative elements */}
@@ -66,14 +67,14 @@ export default function ContactPage() {
           <div className="space-y-8 animate-slide-in-left">
             <Card className="custom-card">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-700">Contact Information</CardTitle>
-                <CardDescription>Here are the ways you can reach me directly</CardDescription>
+                <CardTitle className="text-2xl text-blue-700">{t("contact.info")}</CardTitle>
+                <CardDescription>{t("contact.infoDesc")}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-start hover-scale">
                   <Mail className="h-6 w-6 mr-4 text-blue-600 mt-1" />
                   <div>
-                    <h3 className="font-medium">Email</h3>
+                    <h3 className="font-medium">{t("contact.email")}</h3>
                     <a
                       href="mailto:ismaildavou16@gmail.com"
                       className="text-blue-600 hover:text-blue-800 transition-colors"
@@ -86,7 +87,7 @@ export default function ContactPage() {
                 <div className="flex items-start hover-scale">
                   <Phone className="h-6 w-6 mr-4 text-blue-600 mt-1" />
                   <div>
-                    <h3 className="font-medium">Phone</h3>
+                    <h3 className="font-medium">{t("contact.phone")}</h3>
                     <a href="tel:+33611644116" className="text-blue-600 hover:text-blue-800 transition-colors">
                       06 11 64 41 16
                     </a>
@@ -112,30 +113,30 @@ export default function ContactPage() {
 
             <Card className="custom-card">
               <CardHeader>
-                <CardTitle className="text-2xl text-blue-700">Looking For</CardTitle>
+                <CardTitle className="text-2xl text-blue-700">{t("contact.lookingFor")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 mr-3 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-medium">Internship</h3>
-                    <p className="text-gray-600">June to September 2025</p>
+                    <h3 className="font-medium">{t("contact.internship")}</h3>
+                    <p className="text-gray-600">{t("contact.internshipPeriod")}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 mr-3 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-medium">Apprenticeship</h3>
-                    <p className="text-gray-600">From September 2025</p>
+                    <h3 className="font-medium">{t("contact.apprenticeship")}</h3>
+                    <p className="text-gray-600">{t("contact.apprenticeshipPeriod")}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <CheckCircle className="h-5 w-5 mr-3 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="font-medium">Fields of Interest</h3>
-                    <p className="text-gray-600">Actuarial Science, Data Science, Risk Management</p>
+                    <h3 className="font-medium">{t("contact.fieldsOfInterest")}</h3>
+                    <p className="text-gray-600">{t("contact.fields")}</p>
                   </div>
                 </div>
               </CardContent>
@@ -145,23 +146,23 @@ export default function ContactPage() {
           {/* Contact Form */}
           <Card className="custom-card animate-slide-in-right">
             <CardHeader>
-              <CardTitle className="text-2xl text-blue-700">Send Me a Message</CardTitle>
-              <CardDescription>Fill out the form below and I'll get back to you as soon as possible</CardDescription>
+              <CardTitle className="text-2xl text-blue-700">{t("contact.sendMessage")}</CardTitle>
+              <CardDescription>{t("contact.sendMessageDesc")}</CardDescription>
             </CardHeader>
             <CardContent>
               {isSubmitted ? (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center">
                   <CheckCircle className="h-6 w-6 text-green-600 mr-3" />
-                  <p className="text-green-800">Thank you for your message! I'll get back to you soon.</p>
+                  <p className="text-green-800">{t("contact.thankYou")}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
+                    <Label htmlFor="name">{t("contact.name")}</Label>
                     <Input
                       id="name"
                       name="name"
-                      placeholder="Your name"
+                      placeholder={t("contact.namePlaceholder")}
                       value={formState.name}
                       onChange={handleChange}
                       required
@@ -170,12 +171,12 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                    <Label htmlFor="email">{t("contact.email")}</Label>
                     <Input
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="your.email@example.com"
+                      placeholder={t("contact.emailPlaceholder")}
                       value={formState.email}
                       onChange={handleChange}
                       required
@@ -184,11 +185,11 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
+                    <Label htmlFor="subject">{t("contact.subject")}</Label>
                     <Input
                       id="subject"
                       name="subject"
-                      placeholder="What is this regarding?"
+                      placeholder={t("contact.subjectPlaceholder")}
                       value={formState.subject}
                       onChange={handleChange}
                       required
@@ -197,11 +198,11 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">{t("contact.message")}</Label>
                     <Textarea
                       id="message"
                       name="message"
-                      placeholder="Your message here..."
+                      placeholder={t("contact.messagePlaceholder")}
                       rows={5}
                       value={formState.message}
                       onChange={handleChange}
@@ -237,11 +238,11 @@ export default function ContactPage() {
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                           ></path>
                         </svg>
-                        Sending...
+                        {t("contact.sending")}
                       </span>
                     ) : (
                       <span className="flex items-center">
-                        <Send className="mr-2 h-4 w-4" /> Send Message
+                        <Send className="mr-2 h-4 w-4" /> {t("contact.send")}
                       </span>
                     )}
                   </Button>
