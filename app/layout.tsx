@@ -21,14 +21,27 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Ismail's Portfolio | Actuarial Science Student",
+  title: "Ismail Mohamed El Hafed | Actuaire & Data Scientist",
   description:
-    "Personal portfolio of Ismail Mohamed El Hafed, Actuarial Science Student at ISFA seeking internship and apprenticeship opportunities.",
+    "Portfolio d'Ismail Mohamed El Hafed, étudiant en M2 Actuariat à l'ISFA. Découvrez mes projets en data science, machine learning et actuariat.",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-icon.png",
   },
-  generator: 'v0.dev'
+  openGraph: {
+    title: "Ismail Mohamed El Hafed | Actuaire & Data Scientist",
+    description:
+      "Portfolio d'Ismail Mohamed El Hafed, étudiant en M2 Actuariat à l'ISFA. Découvrez mes projets en data science, machine learning et actuariat.",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Ismail Mohamed El Hafed — Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ismail Mohamed El Hafed | Actuaire & Data Scientist",
+    description:
+      "Portfolio d'Ismail Mohamed El Hafed — Actuariat, Data Science & Machine Learning.",
+  },
 }
 
 export default function RootLayout({

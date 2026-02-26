@@ -11,10 +11,9 @@ import { LanguageToggle } from "@/components/language-toggle"
 
 const navItems = [
   { key: "nav.home", href: "/" },
-  { key: "nav.about", href: "/about" },
   { key: "nav.experience", href: "/experience" },
   { key: "nav.projects", href: "/projects" },
-  { key: "nav.contact", href: "/contact" },
+  { key: "nav.about", href: "/about" },
   { key: "nav.resume", href: "/resume" },
 ]
 
@@ -54,15 +53,17 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-blue-600 relative group",
-                pathname === item.href ? "text-blue-700 font-semibold" : "text-gray-700",
+                "text-sm font-medium transition-all duration-200 relative group px-3 py-1.5 rounded-md",
+                pathname === item.href
+                  ? "text-blue-700 font-semibold bg-blue-50"
+                  : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50",
               )}
             >
               {t(item.key)}
               <span
                 className={cn(
-                  "absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full",
-                  pathname === item.href ? "w-full" : "",
+                  "absolute -bottom-0.5 left-1/2 -translate-x-1/2 h-0.5 bg-blue-600 transition-all duration-300 rounded-full",
+                  pathname === item.href ? "w-4/5" : "w-0 group-hover:w-3/5",
                 )}
               ></span>
             </Link>
@@ -83,14 +84,16 @@ export default function Navbar() {
       {/* Mobile navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden animate-fade-in">
-          <div className="container py-4 space-y-2 bg-white/95 backdrop-blur-md rounded-b-lg shadow-lg">
+          <div className="container py-4 space-y-1 bg-white/95 backdrop-blur-md rounded-b-lg shadow-lg">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "block py-2 text-base font-medium transition-colors hover:text-blue-600 hover:bg-blue-50 px-4 rounded-md",
-                  pathname === item.href ? "text-blue-700 bg-blue-50" : "text-gray-700",
+                  "block py-2.5 text-base font-medium transition-all duration-200 px-4 rounded-md",
+                  pathname === item.href
+                    ? "text-blue-700 bg-blue-50 font-semibold"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50",
                 )}
                 onClick={() => setMobileMenuOpen(false)}
               >

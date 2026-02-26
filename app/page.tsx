@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[80vh] flex items-center py-16 md:py-24">
+      <section className="relative w-full min-h-[85vh] flex items-center py-16 md:py-24">
         {/* Background Image and Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -29,38 +29,37 @@ export default function Home() {
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-8 lg:gap-12">
             {/* Text Block */}
-            <div className="w-full md:w-3/5 lg:w-1/2 bg-white/80 backdrop-blur-md p-8 rounded-lg shadow-xl animate-slide-up order-2 md:order-1">
-              <h1 className="text-4xl font-bold tracking-tight text-blue-800 sm:text-5xl mb-4">
+            <div className="w-full md:w-3/5 lg:w-1/2 bg-white/80 backdrop-blur-md p-8 md:p-10 rounded-xl shadow-xl animate-slide-up order-2 md:order-1">
+              <h1 className="text-4xl font-bold tracking-tight text-blue-800 sm:text-5xl mb-2">
                 {t("home.title")}
               </h1>
-              <h2 className="text-2xl font-bold text-blue-700 mb-4">
-                {t("home.subtitle")}
+              <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600 mb-5">
+                {t("home.headline")}
               </h2>
-              <p className="text-lg text-gray-800 mb-6">
-                {t("home.intro")}
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                {t("home.subheadline")}
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button asChild className="bg-blue-600 hover:bg-blue-700 custom-button">
-                  <Link href="/about">
-                    {t("home.learnMore")} <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                <Button asChild className="bg-blue-600 hover:bg-blue-700 custom-button text-base px-6 py-3">
+                  <a href="/documents/resume.pdf" download>
+                    <Download className="mr-2 h-5 w-5" /> {t("home.downloadCV")}
+                  </a>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
-                  className="border-blue-600 text-blue-600 hover:bg-blue-50 custom-button"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-50 custom-button text-base px-6 py-3"
                 >
-                  <Link href="/resume">
-                    {t("home.viewResume")} <Download className="ml-2 h-4 w-4" />
+                  <Link href="/projects">
+                    <ArrowRight className="mr-2 h-5 w-5" /> {t("home.viewProjects")}
                   </Link>
                 </Button>
               </div>
             </div>
-            {/* End Text Block */}
 
             {/* Image Block */}
             <div className="w-full md:w-2/5 lg:w-1/3 order-1 md:order-2 animate-slide-up">
-              <div className="relative w-full max-w-xs mx-auto md:max-w-sm aspect-square overflow-hidden rounded-lg shadow-xl image-hover-zoom">
+              <div className="relative w-full max-w-xs mx-auto md:max-w-sm aspect-square overflow-hidden rounded-xl shadow-xl image-hover-zoom">
                 <Image
                   src="/images/LCP_2588.jpg"
                   alt="Ismail Mohamed El Hafed"
@@ -69,11 +68,9 @@ export default function Home() {
                 />
               </div>
             </div>
-            {/* End Image Block */}
           </div>
         </div>
       </section>
-      {/* End Hero Section */}
 
       {/* Quick Overview Section */}
       <section className="py-16 bg-white/80 backdrop-blur-md">
@@ -135,7 +132,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* End Quick Overview Section */}
 
       {/* Contact Preview */}
       <section className="py-16 bg-white/70 backdrop-blur-md">
@@ -172,12 +168,8 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <Button asChild className="bg-blue-600 hover:bg-blue-700 custom-button animate-pulse-slow">
-            <Link href="/contact">{t("home.contactMe")}</Link>
-          </Button>
         </div>
       </section>
-      {/* End Contact Preview */}
     </main>
   );
 }

@@ -24,11 +24,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  {t("nav.about")}
-                </Link>
-              </li>
-              <li>
                 <Link href="/experience" className="text-gray-600 hover:text-blue-600 transition-colors">
                   {t("nav.experience")}
                 </Link>
@@ -39,8 +34,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  {t("nav.contact")}
+                <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  {t("nav.about")}
                 </Link>
               </li>
               <li>
@@ -91,4 +86,3 @@ export default function Footer() {
     </footer>
   )
 }
-

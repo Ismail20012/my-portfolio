@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Award, BookOpen, Globe } from "lucide-react";
+import { GraduationCap, Award, BookOpen, Globe, Target, MapPin } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function AboutPage() {
@@ -11,41 +11,54 @@ export default function AboutPage() {
   return (
     <main className="container mx-auto px-4 py-12 animate-fade-in">
       <div className="max-w-5xl mx-auto bg-white/90 backdrop-blur-md rounded-xl p-8 shadow-lg">
-        <h1 className="text-4xl font-bold mb-8 text-center text-blue-800">{t("about.title")}</h1>
+        <h1 className="text-4xl font-bold mb-12 text-center text-blue-800">{t("about.title")}</h1>
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Text Content */}
-          <div className="flex flex-col justify-center animate-slide-in-left">
-            <h2 className="text-2xl font-semibold mb-4 text-blue-700">Ismail Mohamed El Hafed</h2>
-            <p className="text-lg text-gray-700 mb-6">
-              {t("about.intro")}
-            </p>
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
-              <h3 className="font-semibold text-blue-800 mb-2">{t("about.exchangeTitle")}</h3>
-              <p className="text-gray-700">
-                {t("about.exchangeDesc")}
+        {/* Split Layout: Text + Photo */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-16">
+          {/* Text Content — 3/5 */}
+          <div className="lg:col-span-3 flex flex-col justify-center space-y-8 animate-slide-in-left">
+            {/* Introduction */}
+            <div>
+              <h2 className="text-2xl font-semibold mb-3 text-blue-700 flex items-center gap-2">
+                <GraduationCap className="h-6 w-6" /> {t("about.introTitle")}
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {t("about.intro")}
               </p>
             </div>
-            <p className="text-lg text-gray-700">
-              {t("about.passion")}
-            </p>
-          </div>
-          {/* End Text Content */}
 
-          {/* Image Section */}
-          <div className="flex justify-center items-start animate-slide-in-right">
+            {/* Vision */}
+            <div>
+              <h2 className="text-2xl font-semibold mb-3 text-blue-700 flex items-center gap-2">
+                <Target className="h-6 w-6" /> {t("about.visionTitle")}
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {t("about.vision")}
+              </p>
+            </div>
+
+            {/* Mobility */}
+            <div>
+              <h2 className="text-2xl font-semibold mb-3 text-blue-700 flex items-center gap-2">
+                <MapPin className="h-6 w-6" /> {t("about.mobilityTitle")}
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {t("about.mobility")}
+              </p>
+            </div>
+          </div>
+
+          {/* Photo — 2/5 */}
+          <div className="lg:col-span-2 flex justify-center items-start animate-slide-in-right">
             <Image
               src="/images/LCP_1442.jpg"
               alt="Ismail Mohamed El Hafed"
               width={800}
               height={1200}
-              className="rounded-lg shadow-lg w-full h-auto max-w-md image-hover-zoom"
+              className="rounded-xl shadow-lg w-full h-auto max-w-md image-hover-zoom"
             />
           </div>
-          {/* End Image Section */}
         </div>
-        {/* End Main Content Grid */}
 
         <div className="section-divider my-12 border-t border-gray-200"></div>
 
@@ -106,7 +119,6 @@ export default function AboutPage() {
             </CardContent>
           </Card>
         </div>
-        {/* End Education Section */}
 
         <div className="section-divider my-12 border-t border-gray-200"></div>
 
@@ -119,7 +131,7 @@ export default function AboutPage() {
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <span className="w-32 font-medium flex-shrink-0">{t("about.programming")}</span>
-                  <span className="text-gray-700">Python, R, VBA</span>
+                  <span className="text-gray-700">Python, R, C++, VBA</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-32 font-medium flex-shrink-0">{t("about.dataAnalysis")}</span>
@@ -169,7 +181,6 @@ export default function AboutPage() {
             </CardContent>
           </Card>
         </div>
-        {/* End Skills Section */}
 
         {/* International Experience Section */}
         <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">
@@ -180,7 +191,6 @@ export default function AboutPage() {
             {t("about.internationalDesc")}
           </p>
         </div>
-        {/* End International Experience Section */}
 
       </div>
     </main>
