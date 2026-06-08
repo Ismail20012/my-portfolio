@@ -94,7 +94,7 @@ export const translations: Record<string, string> = {
 
     // Page Projets
     "projects.title": "Projets & Travaux de Recherche",
-    "projects.intro": "Sélection de travaux académiques, professionnels et personnels. Ils illustrent mon approche alliant théorie mathématique, outils de modélisation actuarielle et techniques modernes d'analyse de données.",
+    "projects.intro": "Voici quelques projets académiques sur les quels j'ai travillé lors de ma formation d'actuaire à l'ISFA",
     "projects.downloadReport": "Télécharger le rapport",
     "projects.downloadSlides": "Télécharger les slides",
     "projects.viewReport": "Voir le rapport",
