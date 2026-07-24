@@ -7,7 +7,8 @@ import { ArrowRight, Download, Mail, Phone, Linkedin } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const resumePath = language === "fr" ? "/documents/Ismail_CV_FR.pdf" : "/documents/Ismail_CV_EN.pdf";
 
   return (
     <main className="min-h-screen">
@@ -41,7 +42,7 @@ export default function Home() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button asChild className="bg-blue-600 hover:bg-blue-700 custom-button text-base px-6 py-3">
-                  <a href="/documents/resume.pdf" download>
+                  <a href={resumePath} download>
                     <Download className="mr-2 h-5 w-5" /> {t("home.downloadCV")}
                   </a>
                 </Button>
@@ -150,10 +151,10 @@ export default function Home() {
             <div className="flex items-center hover-scale">
               <Phone className="h-5 w-5 mr-2 text-blue-600" />
               <a
-                href="tel:+33611644116"
+                href="tel:+33746211889"
                 className="text-blue-600 hover:text-blue-800 transition-colors"
               >
-                06 11 64 41 16
+                07 46 21 18 89
               </a>
             </div>
             <div className="flex items-center hover-scale">

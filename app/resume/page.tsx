@@ -6,7 +6,8 @@ import { Download, Briefcase, GraduationCap, Code } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function ResumePage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const resumePath = language === "fr" ? "/documents/Ismail_CV_FR.pdf" : "/documents/Ismail_CV_EN.pdf";
 
   return (
     <main className="container mx-auto px-4 py-12 animate-fade-in">
@@ -45,7 +46,7 @@ export default function ResumePage() {
         {/* Download Button */}
         <div className="flex justify-center mb-8">
           <Button asChild className="bg-blue-600 hover:bg-blue-700 custom-button text-base px-8 py-3">
-            <a href="/documents/resume.pdf" download>
+            <a href={resumePath} download>
               <Download className="mr-2 h-5 w-5" /> {t("resume.download")}
             </a>
           </Button>
@@ -57,14 +58,14 @@ export default function ResumePage() {
             <h2 className="text-2xl font-bold mb-4 text-center text-blue-800">{t("resume.viewResume")}</h2>
             <div className="w-full bg-gray-100 shadow-inner rounded-lg overflow-hidden" style={{ height: "85vh" }}>
               <iframe
-                src="/documents/resume.pdf#toolbar=1&navpanes=0"
+                src={`${resumePath}#toolbar=1&navpanes=0`}
                 className="w-full h-full border-none"
                 title="Resume PDF Preview"
               >
                 <p className="p-4 text-center text-red-600">
                   Your browser does not support embedded PDFs.
                   <a
-                    href="/documents/resume.pdf"
+                    href={resumePath}
                     download
                     className="text-blue-600 underline ml-2"
                   >

@@ -29,11 +29,11 @@ export default function ExperiencePage() {
               <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mt-2 gap-y-1 sm:gap-x-6">
                 <div className="flex items-center">
                   <Calendar className="h-4 w-4 mr-2" />
-                  <span>Sept 2025 – Aug 2027</span>
+                  <span>{t("experience.cnpPeriod")}</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-4 w-4 mr-2" />
-                  <span>Lyon / Issy-les-Moulineaux, France</span>
+                  <span>Issy-les-Moulineaux, France</span>
                 </div>
               </div>
             </CardHeader>
@@ -69,7 +69,7 @@ export default function ExperiencePage() {
               <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mt-2 gap-y-1 sm:gap-x-6">
                 <div className="flex items-center">
                   <Calendar className="h-4 w-4 mr-2" />
-                  <span>June 2025 – July 2025</span>
+                  <span>{t("experience.nextuarialPeriod")}</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-4 w-4 mr-2" />
@@ -122,7 +122,7 @@ export default function ExperiencePage() {
               <div className="flex flex-col sm:flex-row sm:items-center text-gray-600 mt-2 gap-y-1 sm:gap-x-6">
                 <div className="flex items-center">
                   <Calendar className="h-4 w-4 mr-2" />
-                  <span>July 2024 – Aug 2024</span>
+                  <span>{t("experience.lhconsultPeriod")}</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-4 w-4 mr-2" />

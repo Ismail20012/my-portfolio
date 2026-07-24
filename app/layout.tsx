@@ -23,7 +23,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Ismail Mohamed El Hafed | Actuaire & Data Scientist",
   description:
-    "Portfolio d'Ismail Mohamed El Hafed, étudiant en M2 Actuariat à l'ISFA. Découvrez mes projets en data science, machine learning et actuariat.",
+    "Portfolio d'Ismail Mohamed El Hafed, diplômé du Master Actuariat de l'ISFA et apprenti actuaire chez CNP Assurances. Découvrez mes projets en actuariat, data science et modélisation des risques.",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-icon.png",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ismail Mohamed El Hafed | Actuaire & Data Scientist",
     description:
-      "Portfolio d'Ismail Mohamed El Hafed, étudiant en M2 Actuariat à l'ISFA. Découvrez mes projets en data science, machine learning et actuariat.",
+      "Portfolio d'Ismail Mohamed El Hafed, diplômé du Master Actuariat de l'ISFA et apprenti actuaire chez CNP Assurances. Découvrez mes projets en actuariat, data science et modélisation des risques.",
     type: "website",
     locale: "fr_FR",
     siteName: "Ismail Mohamed El Hafed — Portfolio",

@@ -12,7 +12,7 @@ export const translations: Record<string, string> = {
     // Home page
     "home.title": "Ismail Mohamed El Hafed",
     "home.headline": "Actuary",
-    "home.subheadline": "Actuarial Apprentice at CNP Assurances, seeking career opportunities from mid-september 2026, more particularly in Pricing, Reserving and actuarial modelling. I bridge the gap between traditional actuarial science and New tools available to model tomorrow's risks.",
+    "home.subheadline": "ISFA Master's graduate and Actuarial Apprentice at CNP Assurances, with a particular interest in pricing, reserving, actuarial modelling and financial steering. I combine traditional actuarial rigour with modern tools to model tomorrow's risks.",
     "home.downloadCV": "Download CV",
     "home.viewProjects": "View my projects",
     "home.focusAreas": "My Focus Areas",
@@ -30,11 +30,11 @@ export const translations: Record<string, string> = {
     // About page
     "about.title": "About Me",
     "about.introTitle": "Who I Am",
-    "about.intro": "I am a soon-to-be actuarial graduate from ISFA (Master 2) with a background in highly competitive math-intensive preparatory classes (MPSI/MP*). I define myself as a technical actuary. I am passionate about quantitative risk modeling, linking traditional actuarial methods (pricing, reserving, ALM) with modern data science and machine learning to construct robust decision-making frameworks.",
+    "about.intro": "I hold a Master's degree in Actuarial Science from ISFA and previously completed math-intensive preparatory classes (MPSI/MP*). My actuarial thesis, required for qualification with the French Institute of Actuaries, is in progress. I define myself as a technical actuary, linking traditional actuarial methods (pricing, reserving and ALM) with modern data science and machine learning to build robust decision-making frameworks.",
     "about.visionTitle": "My Actuarial Philosophy",
     "about.vision": "I believe that the modern actuary should pair the rigor of classical mathematical theory with state-of-the-art programming tools. Whether optimizing P&C reserving using machine learning clustering, simulating asset-liability trajectories with Monte Carlo methods, or steering CSM under IFRS 17, my goal is to design clean, automated, and business-focused solutions.",
     "about.mobilityTitle": "Mobility & Career Interests",
-    "about.mobility": "Having developed a strong sense of adaptability through my exchange semester in Vietnam and professional experiences, I am seeking opportunities in actuarial science, pricing, reserving, or financial steering across France and Europe starting September 2026.",
+    "about.mobility": "Having developed a strong sense of adaptability through my exchange semester in Vietnam and professional experience, I am seeking opportunities in actuarial science, pricing, reserving or financial steering, primarily in France and Ireland, with broader openness to Europe.",
     "about.educationTitle": "Academic Journey",
     "about.masterDegree": "Master's at ISFA",
     "about.institution": "Institution:",
@@ -77,6 +77,9 @@ export const translations: Record<string, string> = {
 
     // Experience page
     "experience.title": "Professional Path",
+    "experience.cnpPeriod": "Sep 2025 – Present",
+    "experience.nextuarialPeriod": "Jun 2025 – Jul 2025",
+    "experience.lhconsultPeriod": "Jul 2024 – Aug 2024",
     "experience.cnpTitle": "Actuarial Apprentice – Financial Steering Prévoyance, CNP Assurances",
     "experience.cnpTask1": "Designed and developed a long-term (10-year) P&L financial projection model for the entire Prévoyance portfolio (Life, Disability, Long-Term Care, Funeral, GAV, Credit Life).",
     "experience.cnpTask2": "Produced and analyzed multi-norm financial forecasts (French GAAP & IFRS 17), tracking technical margins, combined ratios, lapse rates, and profit sharing (PB). Contributed actively to the ORSA report and strategic planning.",
@@ -86,9 +89,9 @@ export const translations: Record<string, string> = {
     "experience.internshipReport": "Internship Report (PDF)",
     "experience.nextuarialTask1": "Developed a custom LLM-powered assistant (RAG chatbot) connected to Nextuarial's ReAcT reserving engine: built a Streamlit application that translates natural language questions into database queries to analyze claims data.",
     "experience.nextuarialTask2": "Designed the complete technical architecture: automated Excel/CSV data ingestion, handled data cleaning via Pandas, connected to OpenAI APIs, and generated dynamic charts (Plotly) and formatted reports (PDF, PowerPoint, Word).",
-    "experience.nextuarialTask3": "Optimized and put the tool into production for concrete actuarial usage, including calculating Chain-Ladder development factors, projecting ultimate claims, and performing multi-year comparisons.",
-    "experience.nextuarialTask4": "Conducted applied research on P&C portfolio segmentation: applied unsupervised machine learning (K-Means, hierarchical clustering) to the SPLICE database, diagnosing via PCA and evaluating through Silhouette and Davies-Bouldin indices.",
-    "experience.nextuarialTask5": "Validated the segmentation via back-testing: compared Chain-Ladder reserving accuracy on raw triangles versus clustered triangles, demonstrating improved risk homogeneity and reserving stability.",
+    "experience.nextuarialTask3": "Developed, tested and strengthened a prototype for practical actuarial use cases, including Chain-Ladder development factors, ultimate claim projections and multi-year comparisons.",
+    "experience.nextuarialTask4": "Conducted applied research on 139,109 synthetic P&C claims across 24 lines of business: reduced 45 variables to 16 and compared K-Means and hierarchical segmentations using PCA diagnostics.",
+    "experience.nextuarialTask5": "Evaluated 12 clusters with statistical and business metrics (Silhouette, Davies-Bouldin and a 0.709 business score), then explored raw versus segmented triangles for Chain-Ladder reserving.",
     "experience.lhconsultTitle": "Software & Web Development Intern, LHconsult",
     "experience.lhconsultTask1": "Designed and deployed the company's showcase website, combining WordPress content management with custom HTML/CSS/JavaScript components.",
     "experience.lhconsultTask2": "Built automated internal workflows to organize and process client data more efficiently on a daily basis.",
@@ -107,7 +110,7 @@ export const translations: Record<string, string> = {
     "resume.title": "Resume & Credentials",
     "resume.download": "Download Resume (PDF)",
     "resume.statusLabel": "Current Role",
-    "resume.statusValue": "Actuarial Apprentice in Financial Steering (CNP Assurances) & M2 ISFA Student",
+    "resume.statusValue": "Actuarial Apprentice in Financial Steering at CNP Assurances and ISFA Master's graduate; actuarial qualification thesis in progress",
     "resume.expertiseLabel": "Core Expertise",
     "resume.expertiseValue": "Risk Modeling, Pricing (GLM/ML), Reserving, ALM, FGAAP & IFRS 17",
     "resume.techLabel": "Tools & Languages",
@@ -115,7 +118,7 @@ export const translations: Record<string, string> = {
     "resume.viewResume": "View Resume",
 
     // Footer
-    "footer.student": "Actuary — ISFA",
+    "footer.student": "Master's graduate in Actuarial Science — ISFA",
     "footer.quickLinks": "Quick Links",
     "footer.contact": "Contact",
     "footer.rights": "All rights reserved.",

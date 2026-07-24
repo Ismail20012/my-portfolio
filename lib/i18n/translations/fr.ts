@@ -10,7 +10,7 @@ export const translations: Record<string, string> = {
     // Page d'accueil
     "home.title": "Ismail Mohamed El Hafed",
     "home.headline": "Actuaire",
-    "home.subheadline": "Alternant chez CNP Assurances, à la recherche d'opportunités professionnelles à partir de mi-septembre 2026, plus particulièrement en tarification, provisionnement et modélisation actuarielle. Je combine la rigueur actuarielle traditionnelle avec les outils modernes pour modéliser les risques de demain.",
+    "home.subheadline": "Diplômé du Master Actuariat de l'ISFA et alternant chez CNP Assurances, je m'intéresse particulièrement à la tarification, au provisionnement, à la modélisation actuarielle et au pilotage financier. Je combine la rigueur actuarielle traditionnelle avec les outils modernes pour modéliser les risques de demain.",
     "home.downloadCV": "Télécharger mon CV",
     "home.viewProjects": "Voir mes projets",
     "home.focusAreas": "Mes domaines d'expertise",
@@ -28,11 +28,11 @@ export const translations: Record<string, string> = {
     // Page À propos
     "about.title": "À propos",
     "about.introTitle": "Qui suis-je ?",
-    "about.intro": "Futur diplômé de l'ISFA (M2 Actuariat) avec un parcours initial en classes préparatoires MPSI/MP*, je me définis comme un actuaire passionné par la technique. Mon objectif est de faire dialoguer les concepts clés de l'actuariat (tarification, provisionnement, ALM) avec les techniques modernes de data science, de modélisation prédictive et d'intelligence artificielle.",
+    "about.intro": "Diplômé du Master Actuariat de l'ISFA, avec un parcours initial en classes préparatoires MPSI/MP*, je me définis comme un actuaire passionné par la technique. Mon mémoire d'actuariat, nécessaire à la qualification de l'Institut des actuaires, est en cours. Mon objectif est de faire dialoguer les concepts clés de l'actuariat (tarification, provisionnement, ALM) avec les techniques modernes de data science, de modélisation prédictive et d'intelligence artificielle.",
     "about.visionTitle": "Ma vision de l'actuariat",
     "about.vision": "Je crois fermement que l'actuaire moderne doit allier la rigueur des modèles mathématiques classiques à l'agilité des outils technologiques actuels. Qu'il s'agisse d'optimiser le provisionnement IARD par du clustering, de simuler des trajectoires financières par Monte Carlo, ou de piloter la CSM sous IFRS 17, j'aime concevoir des solutions robustes, industrialisées et transparentes pour éclairer les décisions stratégiques.",
     "about.mobilityTitle": "Mobilité & Opportunités",
-    "about.mobility": "Fort d'un parcours enrichi par un semestre d'échange au Vietnam et de solides expériences en entreprise, je recherche des opportunités stimulantes en actuariat, pricing, reserving ou pilotage financier en France ou en Europe à partir de septembre 2026.",
+    "about.mobility": "Fort d'un parcours enrichi par un semestre d'échange au Vietnam et de solides expériences en entreprise, je recherche des opportunités stimulantes en actuariat, tarification, provisionnement ou pilotage financier, en priorité en France et en Irlande, avec une ouverture plus large à l'Europe.",
     "about.educationTitle": "Cursus académique",
     "about.masterDegree": "Master de l'ISFA",
     "about.institution": "Établissement :",
@@ -75,6 +75,9 @@ export const translations: Record<string, string> = {
 
     // Page Expérience
     "experience.title": "Expériences professionnelles",
+    "experience.cnpPeriod": "Sept. 2025 – Aujourd'hui",
+    "experience.nextuarialPeriod": "Juin 2025 – Juil. 2025",
+    "experience.lhconsultPeriod": "Juil. 2024 – Août 2024",
     "experience.cnpTitle": "Apprenti Actuaire – Pilotage Financier Prévoyance, CNP Assurances",
     "experience.cnpTask1": "Conception et développement d'un modèle de projection P&L de long terme (10 ans) pour le portefeuille Prévoyance (Décès, Invalidité, Dépendance, Obsèques, GAV, Emprunteur).",
     "experience.cnpTask2": "Production et analyse des résultats prévisionnels multi-normes (French GAAP & IFRS 17) : suivi de la marge technique, des ratios combinés, des taux de chute et de la participation aux bénéfices (PB). Contribution active au processus ORSA et au plan stratégique.",
@@ -84,9 +87,9 @@ export const translations: Record<string, string> = {
     "experience.internshipReport": "Rapport de stage (PDF)",
     "experience.nextuarialTask1": "Conception d'un assistant conversationnel (chatbot RAG) connecté au moteur de provisionnement ReAcT de Nextuarial : développement d'une application Streamlit traduisant le langage naturel en scripts d'interrogation de bases de données de sinistres.",
     "experience.nextuarialTask2": "Architecture complète du pipeline de données : Ingestion automatique des fichiers Excel/CSV, manipulation avec Pandas, interfaçage avec les APIs d'OpenAI et génération de visuels interactifs (Plotly) et rapports exports (PDF, PowerPoint, Word).",
-    "experience.nextuarialTask3": "Mise en production et fiabilisation de l'outil pour des problématiques actuarielles concrètes (calcul de facteurs de développement Chain-Ladder, projections de charges ultimes et analyses pluriannuelles).",
-    "experience.nextuarialTask4": "Recherche appliquée sur la segmentation de portefeuilles IARD : mise en œuvre d'algorithmes de classification non supervisée (K-Means, clustering hiérarchique) sur la base de données SPLICE, avec diagnostic par ACP et métriques de validation (Silhouette, Davies-Bouldin).",
-    "experience.nextuarialTask5": "Validation par back-testing : comparaison des provisions techniques calculées via Chain-Ladder sur des triangles bruts vs clusterisés, démontrant l'amélioration de l'homogénéité des risques et la stabilité des provisions.",
+    "experience.nextuarialTask3": "Développement, tests et fiabilisation d'un prototype pour des problématiques actuarielles concrètes (facteurs de développement Chain-Ladder, projections de charges ultimes et analyses pluriannuelles).",
+    "experience.nextuarialTask4": "Recherche appliquée sur la segmentation de 139 109 sinistres synthétiques répartis sur 24 branches : réduction de 45 à 16 variables puis comparaison de segmentations K-Means et hiérarchiques avec diagnostic par ACP.",
+    "experience.nextuarialTask5": "Évaluation de 12 clusters par des métriques statistiques et métier (Silhouette, Davies-Bouldin et score métier de 0,709), puis comparaison exploratoire de triangles bruts et segmentés pour le provisionnement Chain-Ladder.",
     "experience.lhconsultTitle": "Stagiaire Développement Web & Logiciel, LHconsult",
     "experience.lhconsultTask1": "Conception et déploiement du site vitrine de l'entreprise, alliant l'administration de contenu WordPress et l'intégration de composants HTML/CSS/JavaScript sur mesure.",
     "experience.lhconsultTask2": "Développement d'outils internes pour automatiser et structurer la collecte et le traitement des données clients au quotidien.",
@@ -94,7 +97,7 @@ export const translations: Record<string, string> = {
 
     // Page Projets
     "projects.title": "Projets & Travaux de Recherche",
-    "projects.intro": "Voici quelques projets académiques sur les quels j'ai travillé lors de ma formation d'actuaire à l'ISFA",
+    "projects.intro": "Voici quelques projets académiques sur lesquels j'ai travaillé lors de ma formation en actuariat à l'ISFA.",
     "projects.downloadReport": "Télécharger le rapport",
     "projects.downloadSlides": "Télécharger les slides",
     "projects.viewReport": "Voir le rapport",
@@ -105,7 +108,7 @@ export const translations: Record<string, string> = {
     "resume.title": "Parcours professionnel",
     "resume.download": "Télécharger mon CV (PDF)",
     "resume.statusLabel": "Situation actuelle",
-    "resume.statusValue": "Apprenti Actuaire en Pilotage Financier (CNP Assurances) & Étudiant M2 ISFA",
+    "resume.statusValue": "Apprenti Actuaire en Pilotage Financier chez CNP Assurances, diplômé du Master Actuariat de l'ISFA ; mémoire d'actuariat en cours",
     "resume.expertiseLabel": "Expertise clé",
     "resume.expertiseValue": "Modélisation des risques, Tarification (GLM/ML), Provisionnement, ALM, IFRS 17",
     "resume.techLabel": "Outils & Langages",
@@ -113,7 +116,7 @@ export const translations: Record<string, string> = {
     "resume.viewResume": "Visualiser le CV",
 
     // Footer
-    "footer.student": "Actuaire — ISFA",
+    "footer.student": "Diplômé du Master Actuariat — ISFA",
     "footer.quickLinks": "Accès rapide",
     "footer.contact": "Contact",
     "footer.rights": "Tous droits réservés.",
